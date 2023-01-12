@@ -1,4 +1,5 @@
 from django.shortcuts import render, HttpResponseRedirect, HttpResponse
+from django.http import JsonResponse
 
 # Create your views here.
 def index(request):
@@ -9,6 +10,15 @@ def page1(request):
 
 def random(request):
     return render(request, 'BasicDjangoFunctionality/random.html')
+
+def jsonForm(request):
+    return render(request, 'BasicDjangoFunctionality/JSONresponse.html')
+
+def jsonResponse(request):
+    name = request.GET['fname']
+    email = request.GET['email']
+    usr_info = [{'Name':name, 'Email Address':email}]
+    return JsonResponse({'UserInfo':usr_info})
 
 def GETform(request):
     return render(request, 'BasicDjangoFunctionality/GETform.html')
