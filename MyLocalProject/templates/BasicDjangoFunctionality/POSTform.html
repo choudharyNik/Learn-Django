@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>POST Form</title>
+</head>
+<body>
+    <form action="postredirect/" method="post">
+        {% csrf_token %}
+        <label for="val1">Value 1: </label>
+        <input type="text" id="val1" name="value1">
+        <label for="val2">Value 2: </label>
+        <input type="text" id="val2" name="value2">
+        
+        <input type="submit">
+    </form>
+</body>
+</html>
