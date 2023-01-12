@@ -4,6 +4,12 @@ from django.shortcuts import render, HttpResponseRedirect, HttpResponse
 def index(request):
     return render(request, 'BasicDjangoFunctionality/index.html')
 
+def page1(request):
+    return render(request, 'BasicDjangoFunctionality/page1.html')
+
+def random(request):
+    return render(request, 'BasicDjangoFunctionality/random.html')
+
 def GETform(request):
     return render(request, 'BasicDjangoFunctionality/GETform.html')
 
